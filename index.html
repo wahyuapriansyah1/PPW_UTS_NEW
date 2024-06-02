@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyEducation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span><b>MyEducation</b></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tutorials">Tutorials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="home" style="margin-bottom: 10%;">
+            <div class="hero-content">
+                <h1>Belajar <span class="highlight">Laravel</span> dengan Mudah</h1>
+                <p>Temukan tutorial, tips, dan trik terbaru dalam pemrograman PHP</p>
+                <button onclick="exploreMore()">Explore More</button>
+            </div>
+        </section>
+        <section class="about" id="about" style="text-align: center; margin-top: 0PX;">
+            <h2>About MyEducation</h2>
+            <p style="margin-left: 10%; margin-right: 10%;">MyEducation adalah solusi tepat bagi siapa saja yang ingin belajar dan berkembang dalam berbagai bidang.
+                Dengan komitmen kami terhadap kualitas dan aksesibilitas, kami percaya bahwa setiap orang memiliki
+                kesempatan untuk sukses melalui pendidikan. Bergabunglah dengan MyEducation hari ini dan mulailah
+                perjalanan belajar Anda!</p>
+        </section>
+        <section class="tutorials" id="tutorials" >
+            <h2 style="text-align: center;">Tutorial Terbaru</h2>
+            <div class="tutorial-items">
+                <div class="tutorial-item">
+                    <img src="Laravel.png" alt="Tutorial 1">
+                    <h3>Pengenalan Laravel</h3>
+                    <p>Apa itu Laravel?</p>
+                    <p>Laravel adalah framework berbasis bahasa pemrograman PHP yang bisa digunakan untuk membantu
+                        proses pengembangan sebuah website agar lebih maksimal. Dengan menggunakan Laravel, website yang
+                        dihasilkan akan lebih dinamis. <br><br>
+
+                        Kehadiran framework Laravel menjadikan bahasa pemrograman PHP menjadi lebih powerful. Perlu kita
+                        ketahui bahwa kehadiran framework Laravel selalu menghadirkan fitur-fitur terbaru dibandingkan
+                        framework lainnya. <br><br>
+
+                        Framework Laravel menggunakan struktur MVC (Model View Controller). MVC merupakan model aplikasi
+                        yang memisahkan antara data dan tampilan berdasarkan komponen aplikasi. Dengan adanya model MVC,
+                        pengguna Laravel menjadi lebih mudah dalam mempelajari Laravel. Serta menjadikan proses
+                        pembuatan aplikasi berbasis website menjadi lebih cepat.</p>
+                </div>
+                <div class="tutorial-item">
+                    <img src="imgphp.png" alt="Tutorial 2">
+                    <h3>instalasi Laravel</h3>
+                    <h2>Langkah 1: Install Composer</h2>
+                    <p>Jika Anda belum menginstal Composer, Anda dapat menginstalnya dengan perintah berikut (untuk
+                        Linux dan macOS):</p>
+                    <pre><code>php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+            php -r "if (hash_file('sha384', 'installer hash') === 'composer-setup.php') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+            php composer-setup.php
+            sudo mv composer.phar /usr/local/bin/composer
+            php -r "unlink('composer-setup.php');"</code></pre>
+                    <p>Untuk Windows, unduh dan jalankan installer dari <a
+                            href="https://getcomposer.org/download/">Composer</a>.</p>
+
+                    <h2>Langkah 2: Install Laravel menggunakan Composer</h2>
+                    <p>Setelah Composer terinstal, Anda dapat menginstal Laravel menggunakan Composer. Anda bisa memilih
+                        untuk menginstal Laravel secara global atau hanya di dalam proyek Anda.</p>
+
+                    <h3>Instalasi Global:</h3>
+                    <pre><code>composer global require laravel/installer</code></pre>
+
+                    <h3>Instalasi Proyek:</h3>
+                    <pre><code>composer create-project --prefer-dist laravel/laravel nama-proyek</code></pre>
+
+                    <h2>Langkah 3: Pindah ke Direktori Proyek</h2>
+                    <pre><code>cd nama-proyek</code></pre>
+
+                    <h2>Langkah 4: Konfigurasi Kunci Aplikasi</h2>
+                    <p>Laravel memerlukan kunci aplikasi untuk berbagai tugas kriptografi. Anda dapat mengatur kunci
+                        aplikasi dengan menjalankan perintah berikut:</p>
+                    <pre><code>php artisan key:generate</code></pre>
+
+                    <h2>Langkah 5: Menjalankan Server Pengembangan</h2>
+                    <p>Untuk menjalankan server pengembangan bawaan Laravel, gunakan perintah berikut:</p>
+                    <pre><code>php artisan serve</code></pre>
+                    <p>Server pengembangan akan berjalan di <code>http://localhost:8000</code>.</p>
+                </div>
+                <div class="tutorial-item">
+                    <img src="laravel-sqlserver.jpg" alt="Tutorial 3">
+                    <h3>Framework Laravel</h3>
+                    <h2>Langkah 1: Konfigurasi Database di File .env</h2>
+                    <p>Laravel menggunakan file <code>.env</code> untuk menyimpan konfigurasi database. Buka file
+                        <code>.env</code> di root proyek Anda dan temukan bagian berikut:</p>
+                    <pre><code>DB_CONNECTION=mysql
+            DB_HOST=127.0.0.1
+            DB_PORT=3306
+            DB_DATABASE=nama_database
+            DB_USERNAME=nama_pengguna
+            DB_PASSWORD=katasandi</code></pre>
+                    <p>Sesuaikan nilai-nilai ini dengan informasi koneksi database Anda. Sebagai contoh:</p>
+                    <pre><code>DB_CONNECTION=mysql
+            DB_HOST=127.0.0.1
+            DB_PORT=3306
+            DB_DATABASE=my_database
+            DB_USERNAME=my_username
+            DB_PASSWORD=my_password</code></pre>
+
+                    <h2>Langkah 2: Instal Driver Database</h2>
+                    <p>Pastikan Anda memiliki driver database yang sesuai terinstal. Untuk MySQL, Anda dapat menginstal
+                        driver PDO dengan perintah berikut:</p>
+                    <pre><code>sudo apt-get install php-mysql</code></pre>
+                    <p>Untuk pengguna Windows, pastikan ekstensi PDO MySQL diaktifkan di file <code>php.ini</code>.</p>
+
+                    <h2>Langkah 3: Jalankan Migrasi</h2>
+                    <p>Setelah konfigurasi database selesai, jalankan migrasi Laravel untuk membuat tabel-tabel yang
+                        diperlukan di database:</p>
+                    <pre><code>php artisan migrate</code></pre>
+                    <p>Perintah ini akan menjalankan semua migrasi yang ada di folder <code>database/migrations</code>.
+                    </p>
+
+                    <h2>Langkah 4: Uji Koneksi Database</h2>
+                    <p>Untuk memastikan koneksi database berhasil, Anda dapat membuat model dan melakukan operasi
+                        database sederhana. Buat model baru dengan perintah berikut:</p>
+                    <pre><code>php artisan make:model TestModel --migration</code></pre>
+                    <p>Perintah ini akan membuat file model baru di <code>app/Models</code> dan file migrasi di
+                        <code>database/migrations</code>.</p>
+
+                    <h3>Contoh Model dan Migrasi</h3>
+                    <p>Edit file migrasi yang baru dibuat di <code>database/migrations</code> dan tambahkan kolom
+                        berikut:</p>
+                    <pre><code>public function up()
+            {
+                Schema::create('test_models', function (Blueprint $table) {
+                    $table->id();
+                    $table->string('name');
+                    $table->timestamps();
+                });
+            }</code></pre>
+                    <p>Jalankan migrasi lagi:</p>
+                    <pre><code>php artisan migrate</code></pre>
+                    <p>Tambahkan data ke dalam tabel <code>test_models</code> melalui Tinker:</p>
+                    <pre><code>php artisan tinker
+            >>> TestModel::create(['name' => 'Test Name']);</code></pre>
+
+                    <h2>Langkah 5: Menampilkan Data dari Database</h2>
+                    <p>Buat rute baru di <code>routes/web.php</code> untuk menampilkan data dari database:</p>
+                    <pre><code>use App\Models\TestModel;
+            
+            Route::get('/test', function () {
+                $data = TestModel::all();
+                return $data;
+            });</code></pre>
+                    <p>Kunjungi <code>http://localhost:8000/test</code> untuk melihat data yang ditambahkan.</p>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact" style="text-align: center;">
+            <h2>Contact Us</h2>
+            <p>Jika Anda memiliki pertanyaan atau butuh bantuan, jangan ragu untuk menghubungi kami melalui media sosial
+                atau email di MyEducation&commat;info.com.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/wahyuapriansyah1"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MyEducation. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
