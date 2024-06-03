@@ -68,7 +68,7 @@ nav {
     background: linear-gradient(to right, #0073e6, #00aaff);
     color: #fff;
     text-align: center;
-    background-image: url(img/bgstatis.jpg);
+    background-image: url(bgstatis.jpg);
     margin-top: 70px; /* Adjusted to accommodate the fixed header */
     margin-bottom: 25%;
 }
